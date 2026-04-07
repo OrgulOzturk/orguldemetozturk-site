@@ -1,14 +1,15 @@
 :root {
-  --bg: #f7f1e7;
-  --surface: rgba(255, 255, 255, 0.82);
-  --surface-strong: #fffdf8;
-  --ink: #1a1f1b;
-  --muted: #56615b;
-  --line: rgba(30, 52, 43, 0.12);
-  --accent: #0f6b57;
-  --accent-dark: #0b4f41;
-  --gold: #c99537;
-  --shadow: 0 18px 45px rgba(15, 35, 31, 0.09);
+  --bg: #f4f7f6;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #ffffff;
+  --ink: #1e2a33;
+  --muted: #556471;
+  --line: rgba(87, 108, 130, 0.14);
+  --accent: #6ea99a;
+  --accent-dark: #4f7399;
+  --gold: #dcc46e;
+  --lavender: #c7bbdf;
+  --shadow: 0 16px 36px rgba(81, 101, 128, 0.12);
   --radius: 24px;
   --radius-sm: 18px;
   --max-width: 1180px;
@@ -28,9 +29,10 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(201, 149, 55, 0.22), transparent 28%),
-    radial-gradient(circle at top right, rgba(15, 107, 87, 0.18), transparent 30%),
-    linear-gradient(180deg, #fbf5ec 0%, #f7f1e7 100%);
+    radial-gradient(circle at top left, rgba(220, 196, 110, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(110, 169, 154, 0.14), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(199, 187, 223, 0.1), transparent 26%),
+    linear-gradient(180deg, #f9fbfc 0%, #f4f7f6 100%);
   font-family: "Manrope", sans-serif;
   line-height: 1.6;
 }
@@ -62,8 +64,8 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(251, 245, 236, 0.72);
-  border: 1px solid rgba(26, 31, 27, 0.06);
+  background: rgba(250, 252, 253, 0.86);
+  border: 1px solid rgba(87, 108, 130, 0.1);
   border-radius: 999px;
   z-index: -1;
 }
@@ -94,7 +96,7 @@ a {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  background: rgba(15, 107, 87, 0.1);
+  background: rgba(110, 169, 154, 0.12);
   color: var(--accent-dark);
 }
 
@@ -176,6 +178,7 @@ a {
 .button-primary {
   background: var(--accent);
   color: white;
+  box-shadow: 0 10px 22px rgba(110, 169, 154, 0.24);
 }
 
 .button-primary:hover,
@@ -184,14 +187,14 @@ a {
 }
 
 .button-secondary {
-  background: rgba(255, 255, 255, 0.66);
-  border-color: rgba(15, 107, 87, 0.15);
+  background: rgba(249, 251, 252, 0.96);
+  border-color: rgba(87, 108, 130, 0.14);
   color: var(--accent-dark);
 }
 
 .button-secondary:hover,
 .button-secondary:focus-visible {
-  background: rgba(15, 107, 87, 0.08);
+  background: rgba(199, 187, 223, 0.12);
 }
 
 .hero-tags {
@@ -206,8 +209,8 @@ a {
 .hero-tags li {
   padding: 0.6rem 0.9rem;
   border-radius: 999px;
-  background: rgba(201, 149, 55, 0.1);
-  color: #6f5626;
+  background: rgba(220, 196, 110, 0.18);
+  color: #6f5f28;
   font-size: 0.94rem;
   font-weight: 700;
 }
@@ -216,8 +219,10 @@ a {
   position: relative;
   overflow: hidden;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(15, 107, 87, 0.96), rgba(11, 79, 65, 0.96));
-  color: white;
+  background:
+    linear-gradient(160deg, rgba(110, 169, 154, 0.94), rgba(79, 115, 153, 0.92)),
+    linear-gradient(220deg, rgba(199, 187, 223, 0.16), transparent 45%);
+  color: #f8fbff;
 }
 
 .card-accent {
@@ -227,7 +232,7 @@ a {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: rgba(201, 149, 55, 0.22);
+  background: rgba(242, 232, 170, 0.28);
 }
 
 .hero-card h2 {
@@ -326,6 +331,7 @@ a {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
+  backdrop-filter: blur(10px);
 }
 
 .feature-card h3,
@@ -343,7 +349,9 @@ a {
 }
 
 .media-card-featured {
-  background: linear-gradient(180deg, rgba(201, 149, 55, 0.14), rgba(255, 255, 255, 0.9));
+  background:
+    linear-gradient(180deg, rgba(220, 196, 110, 0.16), rgba(255, 255, 255, 0.98)),
+    linear-gradient(135deg, rgba(199, 187, 223, 0.08), transparent 55%);
 }
 
 .card-link,
@@ -389,7 +397,7 @@ a {
 
 .publication-group[open] summary {
   border-bottom: 1px solid var(--line);
-  background: rgba(15, 107, 87, 0.06);
+  background: rgba(110, 169, 154, 0.1);
 }
 
 .publication-list {
@@ -451,6 +459,7 @@ a {
   gap: 0.8rem;
   padding: 1.5rem 0 0;
   color: var(--muted);
+  font-size: 0.96rem;
 }
 
 @media (max-width: 1050px) {
